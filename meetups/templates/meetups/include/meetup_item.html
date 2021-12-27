@@ -1,0 +1,17 @@
+<li class="meetup-item">
+    <article>
+        <div class="meetup-summary">
+            <div class="meetup-image">
+                <img src="{{ind_meetup.image.url}}" alt="">
+            </div>
+            <div class="meetup-details">
+                <h3>{{ind_meetup.title}}</h3>
+                <address> {{ind_meetup.location.name}} </address>
+            </div>
+        </div>
+        <div class="meetup-actions">
+            {% comment %} <a href="/meetups/{{ind_meetup.slug}}" class="btn">More Details</a> {% endcomment %}
+            <a href="{% url 'meetup-detail' meetup_slug=ind_meetup.slug %}" class="btn">More Details</a>
+        </div>
+    </article>
+</li>
